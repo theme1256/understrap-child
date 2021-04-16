@@ -4,7 +4,8 @@
   "description": "Basic Child Theme for UnderStrap Theme Framework: https://github.com/holger1411/understrap",
   "main": "index.js",
   "scripts": {
-    "postinstall": "gulp copy-assets"
+    "postinstall": "gulp copy-assets",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",

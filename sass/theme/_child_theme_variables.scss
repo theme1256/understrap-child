@@ -10,5 +10,15 @@
 // Color system
 //
 
-$primary: #7C008C;
 
+$c1: #074B4C;
+$c2: #007B6B;
+$c3: #70EE9C;
+$c4: #B5F44A;
+$c5: #EBEBEB;
+
+// $primary: #7C008C;
+$primary: $c1;
+
+$brand-primary: $c1;
+$brand-secondary: $c2;
