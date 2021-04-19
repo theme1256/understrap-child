@@ -11614,27 +11614,27 @@ figure.woocommerce-product-gallery__wrapper {
   display: block; }
 
 /* Footer Styles */
-.widget_big_footer_menu_widget h3 {
+.widget_big_footer_menu_widget span {
   text-transform: uppercase;
   font-size: .75rem;
-  letter-spacing: 2; }
+  letter-spacing: 2px;
+  color: #fff; }
 
 .widget_big_footer_menu_widget .nav-link {
   padding: 0;
-  color: #B5F44A; }
+  color: #007B6B; }
   .widget_big_footer_menu_widget .nav-link:hover {
-    color: #70EE9C; }
-  .widget_big_footer_menu_widget .nav-link:hover .nav-link {
-    padding: 0;
-    color: #70EE9C;
-    font-size: .9rem;
-    line-height: 1.6rem; }
+    color: #007B6B; }
+    .widget_big_footer_menu_widget .nav-link:hover .nav-link {
+      padding: 0;
+      color: #007B6B;
+      font-size: .9rem;
+      line-height: 1.6rem; }
 
 #wrapper-footer-hero {
   background-color: #EBEBEB; }
-
-#wrapper-footer-hero h2 {
-  color: #007B6B; }
+  #wrapper-footer-hero h2 {
+    color: #007B6B; }
 
 #wrapper-footer-full {
   background-color: #074B4C;
@@ -11647,9 +11647,8 @@ figure.woocommerce-product-gallery__wrapper {
   color: #fff;
   width: 100%;
   padding: 1rem 0rem; }
-
-#wrapper-footer a {
-  color: #B5F44A; }
+  #wrapper-footer a {
+    color: #007B6B; }
 
 @media only screen and (min-width: 992px) {
   .widget_big_footer_menu_widget {
@@ -11717,6 +11716,13 @@ figure.woocommerce-product-gallery__wrapper {
   outline: none;
   margin: 20px auto; }
 
+
+#wrapper-hero .hero .btn.btn-hero:hover,
+#wrapper-hero .hero .wpcf7 input.btn-hero:hover[type=submit],
+.wpcf7 #wrapper-hero .hero input.btn-hero:hover[type=submit] {
+  background-color: #074B4C;
+  border-color: #074B4C; }
+
 @media only screen and (max-width: 991px) {
   #wrapper-hero .hero h1 {
     font-size: 2rem; }
@@ -11733,15 +11739,22 @@ h2 {
   color: #007B6B; }
 
 .h3, h3 {
-  font-size: 1.75rem;
-  color: #70EE9C; }
+  font-size: 1.5rem;
+  color: #007B6B; }
 
 .page .entry-title {
   display: none; }
 
 .entry-content .wp-block-button__link {
   background-color: #007B6B;
-  color: #fff !important; }
+  color: #fff !important;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out; }
+
+.entry-content .wp-block-button__link:hover {
+  background-color: #074B4C;
+  text-transform: none;
+  text-decoration: none; }
 
 .wpcf7 {
   max-width: 100% !important; }
@@ -11781,6 +11794,37 @@ h2 {
 
 .wrapper {
   padding: 5rem 0; }
+
+.navbar-brand::before {
+  content: " ";
+  background: url(https://hundetraening.nu/staging/wp-content/uploads/2021/04/logo-emblem.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 48px;
+  width: 117px;
+  margin: -22px;
+  margin-right: 10px;
+  display: inline-block; }
+
+.entry-content figure.wp-block-media-text__media:not(.no-hover),
+.entry-content figure.wp-block-image:not(.no-hover) {
+  position: relative; }
+  .entry-content figure.wp-block-media-text__media:not(.no-hover)::after,
+  .entry-content figure.wp-block-image:not(.no-hover)::after {
+    -webkit-transition: opacity 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out;
+    content: " ";
+    opacity: 0;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
+    background-image: linear-gradient(black, black);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; }
+  .entry-content figure.wp-block-media-text__media:not(.no-hover):hover::after,
+  .entry-content figure.wp-block-image:not(.no-hover):hover::after {
+    opacity: .2; }
 
 /*
 * Use existing Bootstrap 4 classes and
