@@ -11613,27 +11613,22 @@ figure.woocommerce-product-gallery__wrapper {
 .gallery-caption {
   display: block; }
 
-.widget_big_footer_menu_widget {
-  padding: 0; }
-
+/* Footer Styles */
 .widget_big_footer_menu_widget h3 {
   text-transform: uppercase;
-  font-size: 110%; }
+  font-size: .75rem;
+  letter-spacing: 2; }
 
 .widget_big_footer_menu_widget .nav-link {
   padding: 0;
   color: #B5F44A; }
-
-#wrapper-footer-full {
-  background-color: #074B4C;
-  color: #EBEBEB; }
-
-#wrapper-footer {
-  background-color: #074B4C;
-  color: #fff; }
-
-#wrapper-footer a {
-  color: #B5F44A; }
+  .widget_big_footer_menu_widget .nav-link:hover {
+    color: #70EE9C; }
+  .widget_big_footer_menu_widget .nav-link:hover .nav-link {
+    padding: 0;
+    color: #70EE9C;
+    font-size: .9rem;
+    line-height: 1.6rem; }
 
 #wrapper-footer-hero {
   background-color: #EBEBEB; }
@@ -11641,45 +11636,34 @@ figure.woocommerce-product-gallery__wrapper {
 #wrapper-footer-hero h2 {
   color: #007B6B; }
 
-h1, h2 {
-  font-family: "DM Serif Display",serif; }
+#wrapper-footer-full {
+  background-color: #074B4C;
+  color: #EBEBEB;
+  padding: 2rem 0rem 0rem;
+  width: 100%; }
 
-h2 {
-  color: #007B6B; }
+#wrapper-footer {
+  background-color: #074B4C;
+  color: #fff;
+  width: 100%;
+  padding: 1rem 0rem; }
 
-.page .entry-title {
-  display: none; }
+#wrapper-footer a {
+  color: #B5F44A; }
 
-.entry-content h2 {
-  color: #007B6B; }
+@media only screen and (min-width: 992px) {
+  .widget_big_footer_menu_widget {
+    padding: 0; } }
 
-.entry-content .wp-block-button__link {
-  background-color: #007B6B;
-  color: #fff !important; }
-
-.wpcf7 {
-  max-width: 100% !important; }
-
-@media screen and (min-width: 980px) {
-  .hero {
-    width: 980px; } }
-
-@media screen and (max-width: 640px) {
-  .hero h1 {
-    font-size: 4em; } }
+/* Hero carousel */
+#wrapper-hero .carousel {
+  position: relative; }
 
 #wrapper-hero .carousel .slide {
-  height: 25vh;
+  height: 50vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat; }
-
-#wrapper-hero .carousel {
-  position: relative;
-  height: 25vh; }
-
-#wrapper-hero .carousel .carousel-inner .carousel-item {
-  height: 25vh; }
 
 #wrapper-hero .carousel .carousel-indicators > li {
   margin: 0 2px;
@@ -11692,6 +11676,9 @@ h2 {
   height: 10px;
   opacity: 1; }
 
+#wrapper-hero .carousel .carousel-inner .carousel-item {
+  height: inherit; }
+
 #wrapper-hero .hero {
   position: absolute;
   top: 50%;
@@ -11699,18 +11686,19 @@ h2 {
   z-index: 3;
   color: #fff;
   text-align: center;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.75);
   -webkit-transform: translate3d(-50%, -50%, 0);
   transform: translate3d(-50%, -50%, 0); }
 
 #wrapper-hero .hero h1 {
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: bold;
   margin: 0;
   padding: 0; }
 
 #wrapper-hero .hero h3 {
-  font-size: 1.5em; }
+  font-size: 1.5rem;
+  font-family: Helvetica, "Sans Serif";
+  color: #fff; }
 
 #wrapper-hero .hero .btn.btn-lg, #wrapper-hero .hero .btn-group-lg > .btn,
 #wrapper-hero .hero .wpcf7 .btn-group-lg > input[type=submit], .wpcf7 #wrapper-hero .hero .btn-group-lg > input[type=submit], #wrapper-hero .hero .wpcf7 input.btn-lg[type=submit], .wpcf7 #wrapper-hero .hero input.btn-lg[type=submit] {
@@ -11729,15 +11717,70 @@ h2 {
   outline: none;
   margin: 20px auto; }
 
-#wrapper-hero .carousel .carousel-inner .carousel-item .hero {
-  opacity: 0;
-  -webkit-transition: 2s all ease-in-out .1s;
-  transition: 2s all ease-in-out .1s; }
+@media only screen and (max-width: 991px) {
+  #wrapper-hero .hero h1 {
+    font-size: 2rem; }
+  #wrapper-hero .hero h3 {
+    font-size: 1rem; }
+  #wrapper-hero .hero .btn.btn-hero, #wrapper-hero .hero .wpcf7 input.btn-hero[type=submit], .wpcf7 #wrapper-hero .hero input.btn-hero[type=submit] {
+    margin: 10px auto; } }
 
-#wrapper-hero .carousel .carousel-inner .carousel-item.active .hero {
-  opacity: 1;
-  -webkit-transition: 2s all ease-in-out .1s;
-  transition: 2s all ease-in-out .1s; }
+/* Hundetræning Styles */
+h1, h2, h3 {
+  font-family: "DM Serif Display", Serif; }
+
+h2 {
+  color: #007B6B; }
+
+.h3, h3 {
+  font-size: 1.75rem;
+  color: #70EE9C; }
+
+.page .entry-title {
+  display: none; }
+
+.entry-content .wp-block-button__link {
+  background-color: #007B6B;
+  color: #fff !important; }
+
+.wpcf7 {
+  max-width: 100% !important; }
+
+.wpcf7-form-control.wpcf7-textarea {
+  height: 124px; }
+
+/* Nav bar top of page */
+.navbar-dark .navbar-toggler {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: transparent; }
+
+/* In Page Nav Styles */
+.nav-tabs {
+  border-bottom: 0px; }
+
+.nav-tabs .nav-link {
+  border-left: 1px solid #dee2e6;
+  font-size: 1.3rem;
+  padding: 1rem 1rem;
+  color: #dee2e6;
+  border-radius: 0; }
+
+.nav-tabs .nav-link:hover {
+  color: #777;
+  border-right: 1px solid transparent;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  -webkit-transition: .3s;
+  transition: .3s; }
+
+.nav-tabs .nav-link.active {
+  color: #495057;
+  background-color: #fff;
+  border: 0px;
+  border-left: 1px solid #495057; }
+
+.wrapper {
+  padding: 5rem 0; }
 
 /*
 * Use existing Bootstrap 4 classes and

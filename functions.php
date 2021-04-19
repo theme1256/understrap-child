@@ -37,18 +37,7 @@ require_once get_stylesheet_directory() . "/custom/tab-menu-widget.php";
 require_once get_stylesheet_directory() . "/custom/footer-menu-widget.php";
 require_once get_stylesheet_directory() . "/custom/hero-slide-widget.php";
 require_once get_stylesheet_directory() . "/custom/blockquote-widget.php";
-require_once get_stylesheet_directory() . "/custom/hero.php";
 function understrap_child_load_widget() {
-    unregister_sidebar('hero');
-    register_sidebar(array(
-        'name'          => __( 'Hero Slider', 'understrap' ),
-        'id'            => 'hero',
-        'description'   => __( 'Hero slider area. Place two or more widgets here and they will slide!', 'understrap' ),
-        'before_widget' => '<div class="span3">',
-        'after_widget'  => '</div>',
-        'before_title'  => '<h6 class="footer-widgets-item">',
-        'after_title'   => '</h6><hr>',
-    )); 
     register_sidebar(array(
         'name'          => __( 'Footer hero', 'understrap-child' ),
         'id'            => 'footer-hero',

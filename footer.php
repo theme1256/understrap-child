@@ -29,14 +29,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info row">
 
-						<div class="col-4">
-							&copy; <?= \date("Y"); ?>
+						<div class="col-6">
+							Copyright &copy; <?= \date("Y"); ?>
 						</div>
-						<div class="col-4 text-center">
+						<div class="col-6 text-right">
 							<a href="<?= get_privacy_policy_url(); ?>"><?php _e("Privatlivspolitik"); ?></a>
-						</div>
-						<div class="col-4 text-right">
-							<!-- &copy; <?= \date("Y"); ?> -->
 						</div>
 
 					</div><!-- .site-info -->

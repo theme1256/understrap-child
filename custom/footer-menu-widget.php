@@ -20,7 +20,7 @@ class big_footer_menu_widget extends WP_Widget {
 		echo $args['before_widget'];
 		echo "<div class='row'>";
 		for ($i = 0; $i < $this->menu_count; $i++) {
-			echo "<div class='col-3'>";
+			echo "<div class='col-6 col-md-3'>";
 			$title = apply_filters( 'widget_title', $instance['title' . $i] );
 			if ( ! empty( $title ) )
 				echo $args['before_title'] . $title . $args['after_title'];

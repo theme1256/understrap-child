@@ -1,29 +1,25 @@
-// @import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Open+Sans:400italic,700italic,400,700);
 @import url(https://fonts.googleapis.com/css?family=DM+Serif+Display|Roboto+Slab%7COpen+Sans:400italic,700italic,400,700);
 
+/* Footer Styles */
 .widget_big_footer_menu_widget {
-	& {
-		padding: 0;
-	}
 	h3 {
-		text-transform: uppercase;
-		font-size: 110%;
+	    text-transform: uppercase;
+	    font-size: .75rem;
+	    letter-spacing: 2;
 	}
 	.nav-link {
+		&:hover {
+			& {
+				color: $c3;
+			}
+			.nav-link {
+				padding: 0;
+				color: $c3;
+				font-size: .9rem;
+				line-height: 1.6rem;
+			}
+		}
 		padding: 0;
-		color: $c4;
-	}
-}
-#wrapper-footer-full {
-	background-color: $brand-primary;
-	color: $c5;
-}
-#wrapper-footer {
-	& {
-		background-color: $brand-primary;
-		color: $white;
-	}
-	a {
 		color: $c4;
 	}
 }
@@ -35,58 +31,89 @@
 		color: $brand-secondary;
 	}
 }
-
-
-h1, h2 { font-family: "DM Serif Display",serif; }
-h2 { color: $brand-secondary; }
-.page .entry-title {
-	display: none;
+#wrapper-footer-full {
+	background-color: $brand-primary;
+	color: $c5;
+    padding: 2rem 0rem 0rem;
+    width: 100%;
 }
-.entry-content {
-	h2 {
-		color: $brand-secondary;
+#wrapper-footer {
+	& {
+		background-color: $brand-primary;
+		color: $white;
+		width: 100%;
+		padding: 1rem 0rem;
 	}
-	.wp-block-button__link {
-		background-color: $brand-secondary;
-		color: $white !important;
+	a {
+		color: $c4;
 	}
 }
-.wpcf7{
-	max-width: 100% !important;
+@media only screen and (min-width: 992px) {
+	// #wrapper-footer-full {
+	//     position: fixed;
+	//     bottom: 56px;
+	// }
+	// #wrapper-footer {
+	// 	position: fixed;
+	// 	bottom: 0px;
+	// }
+	// #page {
+	// 	margin-bottom: 208+56px
+	// }
+	.widget_big_footer_menu_widget {
+		padding: 0;
+	}
 }
 
 
-@media screen and (min-width: 980px){
-    .hero { width: 980px; }    
-}
-@media screen and (max-width: 640px){
-    .hero h1 { font-size: 4em; }    
-}
+
+/* Hero carousel */
 #wrapper-hero {
-	.carousel .slide {
-		height: 25vh;
-		background-size: cover;
-		background-position: center center;
-		background-repeat: no-repeat;
-	}
 	.carousel {
-		position: relative;
-		height: 25vh;
+		& {
+			position: relative;
+		}
+		.slide {
+			height: 50vh;
+			background-size: cover;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+		.carousel-indicators > li {
+			& {
+				margin: 0 2px;
+				background-color: #f39c12;
+				border-color: #f39c12;
+				opacity: .7;
+			}
+			&.active {
+				width: 10px;
+				height: 10px;
+				opacity: 1;
+			}
+		}
+		.carousel-inner .carousel-item {
+			& {
+				height: inherit;
+			}
+			// .hero {
+			// 	opacity: 0;
+			// 	-webkit-transition: 2s all ease-in-out .1s;
+			// 	   -moz-transition: 2s all ease-in-out .1s; 
+			// 		-ms-transition: 2s all ease-in-out .1s; 
+			// 		 -o-transition: 2s all ease-in-out .1s; 
+			// 			transition: 2s all ease-in-out .1s; 
+			// }
+			// &.active .hero {
+			// 	opacity: 1;
+			// 	-webkit-transition: 2s all ease-in-out .1s;
+			// 	   -moz-transition: 2s all ease-in-out .1s; 
+			// 		-ms-transition: 2s all ease-in-out .1s; 
+			// 		 -o-transition: 2s all ease-in-out .1s; 
+			// 			transition: 2s all ease-in-out .1s;  
+			// }
+		}
 	}
-	.carousel .carousel-inner .carousel-item {
-		height: 25vh;
-	}
-	.carousel .carousel-indicators > li {
-		margin: 0 2px;
-		background-color: #f39c12;
-		border-color: #f39c12;
-		opacity: .7;
-	}
-	.carousel .carousel-indicators > li.active {
-	  width: 10px;
-	  height: 10px;
-	  opacity: 1;
-	}	
 	.hero {
 		& {
 			position: absolute;
@@ -95,8 +122,7 @@ h2 { color: $brand-secondary; }
 			z-index: 3;
 			color: $white;
 			text-align: center;
-			// text-transform: uppercase;
-			text-shadow: 1px 1px 0 rgba(0,0,0,.75);
+			// text-shadow: 1px 1px 0 rgba(0,0,0,.75);
 			-webkit-transform: translate3d(-50%,-50%,0);
 				-moz-transform: translate3d(-50%,-50%,0);
 				-ms-transform: translate3d(-50%,-50%,0);
@@ -104,15 +130,19 @@ h2 { color: $brand-secondary; }
 					transform: translate3d(-50%,-50%,0);
 		}
 		h1 {
-			font-size: 3em;    
+			font-size: 3rem;    
 			font-weight: bold;
 			margin: 0;
 			padding: 0;
 		}
 		h3 {
-			font-size: 1.5em;
+			font-size: 1.5rem;
+			font-family: Helvetica, "Sans Serif";
+			color: $white;
 		}
-		.btn.btn-lg {padding: 10px 40px;}
+		.btn.btn-lg {
+			padding: 10px 40px;
+		}
 		.btn.btn-hero,
 		.btn.btn-hero:hover,
 		.btn.btn-hero:focus {
@@ -123,21 +153,86 @@ h2 { color: $brand-secondary; }
 			margin: 20px auto;
 		}
 	}
-	
-	.carousel .carousel-inner .carousel-item .hero {
-		opacity: 0;
-		-webkit-transition: 2s all ease-in-out .1s;
-		   -moz-transition: 2s all ease-in-out .1s; 
-			-ms-transition: 2s all ease-in-out .1s; 
-			 -o-transition: 2s all ease-in-out .1s; 
-				transition: 2s all ease-in-out .1s; 
+}
+@media only screen and (max-width: 991px) {
+	#wrapper-hero {
+		.hero {
+			h1 {
+				font-size: 2rem;
+			}
+			h3 {
+				font-size: 1rem;
+			}
+			.btn.btn-hero {
+				margin: 10px auto;
+			}
+		}
 	}
-	.carousel .carousel-inner .carousel-item.active .hero {
-		opacity: 1;
-		-webkit-transition: 2s all ease-in-out .1s;
-		   -moz-transition: 2s all ease-in-out .1s; 
-			-ms-transition: 2s all ease-in-out .1s; 
-			 -o-transition: 2s all ease-in-out .1s; 
-				transition: 2s all ease-in-out .1s;    
+}
+
+
+/* Hundetræning Styles */
+h1, h2, h3 {
+	font-family: "DM Serif Display", Serif;
+}
+h2 {
+	color: $brand-secondary;
+}
+.h3, h3 {
+    font-size: 1.75rem;
+    color: $c3;
+}
+.page .entry-title {
+	display: none;
+}
+.entry-content {
+	.wp-block-button__link {
+		background-color: $brand-secondary;
+		color: $white !important;
 	}
+}
+.wpcf7{
+	max-width: 100% !important;
+}
+.wpcf7-form-control.wpcf7-textarea {
+	height: 124px;
+}
+
+
+/* Nav bar top of page */
+.navbar-dark .navbar-toggler {
+    color: rgba(255,255,255,.5);
+    border-color: transparent;
+}
+
+/* In Page Nav Styles */
+.nav-tabs {
+	& {
+		border-bottom: 0px;
+	}
+	.nav-link {
+		& {
+			border-left: 1px solid #dee2e6;
+			font-size: 1.3rem;
+			padding: 1rem 1rem;
+			color: #dee2e6;
+			border-radius: 0;
+		}
+		&:hover {
+			color: #777;
+			border-right: 1px solid transparent;
+			border-top: 1px solid transparent;
+			border-bottom: 1px solid transparent;
+			transition: .3s;
+		}
+		&.active {
+			color: #495057;
+			background-color: #fff;
+			border: 0px;
+			border-left: 1px solid #495057;
+		}
+	}
+}
+.wrapper {
+	padding: 5rem 0;
 }
