@@ -41,7 +41,7 @@ function understrap_child_load_widget() {
     register_sidebar(array(
         'name'          => __( 'Footer hero', 'understrap-child' ),
         'id'            => 'footer-hero',
-        'description'   => __( 'Add widgets here to appear in your footer area.', 'understrap-child' ),
+        'description'   => __( 'Add blockquotes here to appear in quote-carousel', 'understrap-child' ),
         'before_widget' => '<aside id="%1$s" class="widget %2$s">',
         'after_widget'  => '</aside>',
         'before_title'  => '<h2 class="widget-title">',
