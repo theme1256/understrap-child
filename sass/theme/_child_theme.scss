@@ -18,42 +18,24 @@
 	}
 	.nav-link {
 		padding: 0;
-		color: $c2;
 
 		&:hover {
-			color: $c2;
-
 			.nav-link {
 				padding: 0;
-				color: $c2;
 				font-size: .9rem;
 				line-height: 1.6rem;
 			}
 		}
 	}
 }
-#wrapper-footer-hero {
-	background-color: $c5;
-
-	h2 {
-		color: $brand-secondary;
-	}
-}
 #wrapper-footer-full {
-	background-color: $brand-primary;
-	color: $c5;
     padding: 2rem 0rem 0rem;
     width: 100%;
 }
 #wrapper-footer {
-	background-color: $brand-primary;
 	color: $white;
 	width: 100%;
 	padding: 1rem 0rem;
-
-	a {
-		color: $c2;
-	}
 }
 @media only screen and (min-width: 992px) {
 	.widget_big_footer_menu_widget {
@@ -126,14 +108,8 @@
 		.btn.btn-hero:hover,
 		.btn.btn-hero:focus {
 			color: $white;
-			background-color: $brand-secondary;
-			border-color: $brand-secondary;
 			outline: none;
 			margin: 20px auto;
-		}
-		.btn.btn-hero:hover {
-			background-color: $brand-primary;
-			border-color: $brand-primary;
 		}
 	}
 }
@@ -158,19 +134,14 @@
 h1, h2, h3 {
 	font-family: "DM Serif Display", Serif;
 }
-h2 {
-	color: $brand-secondary;
-}
 .h3, h3 {
     font-size: 1.5rem;
-    color: $brand-secondary;
 }
 .page .entry-title {
 	display: none;
 }
 .entry-content {
 	.wp-block-button__link {
-		background-color: $brand-secondary;
 		color: $white !important;
 		@include transition(
 			color .15s ease-in-out,
@@ -180,7 +151,6 @@ h2 {
 			-webkit-box-shadow .15s ease-in-out);
 	}
 	.wp-block-button__link:hover {
-		background-color: $brand-primary;
 		text-transform: none;
 		text-decoration: none;
 	}
@@ -229,19 +199,6 @@ h2 {
 }
 .wrapper {
 	padding: 5rem 0;
-}
-.navbar-brand {
-	&::before {
-		content: " ";
-		background: url(https://hundetraening.nu/staging/wp-content/uploads/2021/04/logo-emblem.svg);
-		background-size: contain;
-		background-repeat: no-repeat;
-		height: 48px;
-		width: 117px;
-		margin: -22px;
-		margin-right: 10px;
-		display: inline-block;
-	}
 }
 
 .entry-content {
