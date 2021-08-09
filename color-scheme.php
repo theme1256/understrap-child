@@ -11,6 +11,7 @@ class UnderStrapChild_Color_Scheme
 		'footer_background_color',
 		'footer_hero_background_color',
 		'footer_text_color',
+		'heading_text_color',
 	);
 	public function __construct()
 	{
@@ -51,6 +52,7 @@ class UnderStrapChild_Color_Scheme
 			'footer_background_color' => __('Footer background color', 'ts-bootstrap'),
 			'footer_hero_background_color' => __('Footer Hero background color', 'ts-bootstrap'),
 			'footer_text_color' => __('Footer text color', 'ts-bootstrap'),
+			'heading_text_color' => __('Heading text color', 'ts-bootstrap'),
 		);
 		foreach ($options as $key => $label) {
 			$wp_customize->add_setting($key, array(
@@ -92,6 +94,7 @@ class UnderStrapChild_Color_Scheme
 			'footer_background_color' => $t[6],
 			'footer_hero_background_color' => $t[7],
 			'footer_text_color' => $t[8],
+			'heading_text_color' => $t[9],
 		];
 		$css = '
 		.navbar { background-color: '.$colors[$keys["header_background_color"]].'; }
@@ -105,24 +108,29 @@ class UnderStrapChild_Color_Scheme
 		#wrapper-footer a { color: '.$colors[$keys["footer_text_color"]].'; }
 		.btn.btn-hero { background-color: '.$colors[$keys["button_background_color"]].'; border-color: '.$colors[$keys["button_background_color"]].'; }
 		.btn.btn-hero:hover, .btn.btn-hero:focus { background-color: '.$colors[$keys["button_hover_background_color"]].'; border-color: '.$colors[$keys["button_hover_background_color"]].'; }
-		h2, h3 { color: '.$colors[$keys["link_color"]].'; }
+		h2, h3, h4 { color: '.$colors[$keys["heading_text_color"]].'; }
 		.entry-content .wp-block-button__link { background-color: '.$colors[$keys["button_background_color"]].'; }
 		.entry-content .wp-block-button__link:hover { background-color: '.$colors[$keys["button_hover_background_color"]].'; }
+		.bg_button_background{ background-color: '.$colors[$keys["button_background_color"]].'; }
+		.bg_footer_background{ background-color: '.$colors[$keys["footer_background_color"]].'; }
+		.bg_footer_hero_background{ background-color: '.$colors[$keys["footer_hero_background_color"]].'; }
+		.bg_header_background{ background-color: '.$colors[$keys["header_background_color"]].'; }
 		';
 		return $css;
 	}
 	public function color_scheme_template()
 	{
 		$colors = array(
-			'header_background_color'		=> '{{ data.header_background_color }}',		// 1
-			'header_text_color'				=> '{{ data.header_text_color }}',				// 2
-			'link_color'					=> '{{ data.link_color }}',						// 3
-			'button_background_color'		=> '{{ data.button_background_color }}',		// 4
-			'button_hover_background_color'	=> '{{ data.button_hover_background_color }}',	// 5
-			'section_dark_background_color'	=> '{{ data.section_dark_background_color }}',	// 6
-			'footer_background_color'		=> '{{ data.footer_background_color }}',		// 7
-			'footer_hero_background_color'	=> '{{ data.footer_hero_background_color }}',	// 8
-			'footer_text_color'				=> '{{ data.footer_text_color }}',				// 9
+			'header_background_color'		=> '{{ data.header_background_color }}',
+			'header_text_color'				=> '{{ data.header_text_color }}',
+			'link_color'					=> '{{ data.link_color }}',
+			'button_background_color'		=> '{{ data.button_background_color }}',
+			'button_hover_background_color'	=> '{{ data.button_hover_background_color }}',
+			'section_dark_background_color'	=> '{{ data.section_dark_background_color }}',
+			'footer_background_color'		=> '{{ data.footer_background_color }}',
+			'footer_hero_background_color'	=> '{{ data.footer_hero_background_color }}',
+			'footer_text_color'				=> '{{ data.footer_text_color }}',
+			'heading_text_color'			=> '{{ data.heading_text_color }}',
 		);
 ?>
 		<script type="text/html" id="tmpl-ts-bootstrap-color-scheme">
@@ -145,6 +153,7 @@ class UnderStrapChild_Color_Scheme
 					'#ebebeb', // footer_background_color
 					'#292D52', // footer_hero_background_color
 					'#b5f44a', // footer_text_color
+					'#efefef', // heading_text_color
 				),
 			),
 			'hundetraening' => array(
@@ -157,6 +166,7 @@ class UnderStrapChild_Color_Scheme
 					'#00508e',
 					'#aa6600',
 					'#9d5f00',
+					'#dd8500',
 					'#dd8500',
 					'#dd8500',
 				),

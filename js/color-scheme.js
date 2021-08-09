@@ -10,6 +10,7 @@
 			'footer_background_color',
 			'footer_hero_background_color',
 			'footer_text_color',
+			'heading_text_color',
 		];
 
 	// Update list of colors when select a color scheme.

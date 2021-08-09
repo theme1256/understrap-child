@@ -48,6 +48,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 </div><!-- wrapper end -->
 
+<script type="text/javascript">
+$(function() {
+	jQuery("#main .type-page .entry-header").remove();
+});
+</script>
+
 </div><!-- #page we need this extra closing tag here -->
 
 <?php wp_footer(); ?>
