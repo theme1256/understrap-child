@@ -49,7 +49,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 </div><!-- wrapper end -->
 
 <script type="text/javascript">
-$(function() {
+jQuery(function() {
 	jQuery("#main .type-page .entry-header").remove();
 });
 </script>
